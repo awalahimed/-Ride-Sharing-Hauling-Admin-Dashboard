@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(express.json());
 app.use(cors());
-
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 // Routes
 app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter);
